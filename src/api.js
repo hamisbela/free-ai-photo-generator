@@ -7,11 +7,11 @@ const together = new Together({
 export async function generateImage(prompt) {
     try {
         const response = await together.images.create({
-            model: "stabilityai/stable-diffusion-xl-base-1.0",
+            model: "black-forest-labs/FLUX.1-schnell-Free",
             prompt: `ultra realistic photograph, professional photography, 8k uhd, highly detailed: ${prompt}`,
             width: 1024,
             height: 1024,
-            steps: 30,
+            steps: 4,
             n: 1,
             response_format: "b64_json"
         });
